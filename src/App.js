@@ -20,7 +20,7 @@ export default function App() {
     .then(res => {
       console.log("App->res", res);
       setShow(res.data)
-      setSeasons(formatSeasons());
+      setSeasons(formatSeasons(res.data._embedded.episodes));
     });
   },[])
 
